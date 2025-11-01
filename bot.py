@@ -1,51 +1,89 @@
-import random
-from game_message import *
+from game_message import Position
+from game_message import Colony
+from game_message import GameMap
+from game_message import TeamGameState
+from game_message import Action
+from game_message import AddBiomassAction
+from game_message import RemoveBiomassAction
 
 
 class Bot:
     def __init__(self):
-        print("Initializing your super mega duper bot")
+        print("Initializing Confidently Wrong Bot!")
 
     def get_next_move(self, game_message: TeamGameState):
-        actions = []
+        print(f"\n--- Turn {game_message.currentTickNumber} ---")
 
-        # Pick a number of biomass to move this turn.
-        remaining_biomass_to_move_this_turn = random.randint(
-            1, game_message.maximumNumberOfBiomassPerTurn
+        sorted_colonies = self.sort_colonies(game_message.map)
+
+        best_colony = sorted_colonies[0]
+        nearest_colony = self.get_nearest_colony(
+            best_colony, sorted_colonies[1:])
+
+        path = self.calculate_path(
+            best_colony, nearest_colony)
+
+        actions = self.place_biomass_on_path(path, game_message)
+
+        return actions
+
+    def available_biomass(self, game_message):
+        return min(
+            game_message.maximumNumberOfBiomassPerTurn,
+            game_message.availableBiomass
         )
 
-        while remaining_biomass_to_move_this_turn > 0:
-            random_position = Position(
-                x=random.randint(0, game_message.map.width - 1),
-                y=random.randint(0, game_message.map.height - 1),
-            )
+    def sort_colonies(self, game_map):
+        sorted_colonies = sorted(
+            game_map.colonies, key=lambda c: c.nutrients, reverse=True)
+        return sorted_colonies
 
-            # Randomly decide whether to add or remove biomass
-            should_add_biomass = random.choice([True, False])
+    def get_nearest_colony(self, colony, colonies):
+        starting_position = colony.position
+        nearest_colony = min(
+            colonies,
+            key=lambda c: abs(c.position.x - starting_position.x) +
+            abs(c.position.y - starting_position.y)
+        )
+        return nearest_colony
 
-            if should_add_biomass:
-                biomass_to_move_in_this_action = random.randint(
-                    1, remaining_biomass_to_move_this_turn
+    def calculate_path(self, starting_colony, target_colony):
+        path = []
+        current = starting_colony.position
+        target = target_colony.position
+
+        while current != target:
+            if current.x < target.x:
+                current = Position(current.x + 1, current.y)
+            elif current.x > target.x:
+                current = Position(current.x - 1, current.y)
+            elif current.y < target.y:
+                current = Position(current.x, current.y + 1)
+            elif current.y > target.y:
+                current = Position(current.x, current.y - 1)
+            if current != target:
+                path.append(current)
+
+        return path
+
+    def place_biomass_on_path(self, path, game_message):
+        actions = []
+        biomass_to_place = min(
+            game_message.maximumNumberOfBiomassPerTurn,
+            game_message.availableBiomass
+        )
+
+        while biomass_to_place > 0:
+            for position in path:
+                if biomass_to_place <= 0:
+                    break
+
+                action = AddBiomassAction(
+                    type="ADD_BIOMASS",
+                    position=position,
+                    amount=1
                 )
-                remaining_biomass_to_move_this_turn -= biomass_to_move_in_this_action
+                actions.append(action)
+                biomass_to_place -= 1
 
-                actions.append(
-                    AddBiomassAction(
-                        position=random_position, amount=biomass_to_move_in_this_action
-                    )
-                )
-            else:
-                biomass_to_move_in_this_action = min(
-                    remaining_biomass_to_move_this_turn,
-                    game_message.map.biomass[random_position.x][random_position.y],
-                )
-                remaining_biomass_to_move_this_turn -= biomass_to_move_in_this_action
-
-                actions.append(
-                    RemoveBiomassAction(
-                        position=random_position, amount=biomass_to_move_in_this_action
-                    )
-                )
-
-        # You can clearly do better than the random actions above. Have fun!!
         return actions
