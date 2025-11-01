@@ -1,4 +1,7 @@
-from game_message import *
+from game_message import Position
+from game_message import GameMap
+from game_message import TeamGameState
+from game_message import AddBiomassAction
 from path import Path
 
 
@@ -11,7 +14,7 @@ class Bot:
     def get_next_move(self, game_message: TeamGameState):
         print(f"\n--- Turn {game_message.currentTickNumber} ---")
 
-        # Initialize paths on first turn
+        # Initialize paths
         if not self.initialized:
             self.initialize_paths(game_message.map)
 
@@ -21,23 +24,15 @@ class Bot:
         return actions
 
     def initialize_paths(self, game_map: GameMap):
-        """Calculate all paths between colonies"""
-        print("\n=== Initializing Paths ===")
+        """Calculate all paths from colony to colony"""
         colonies = game_map.colonies
-        pairs = set()
-
         for i in range(len(colonies)):
             for j in range(i + 1, len(colonies)):
                 colony1 = colonies[i]
                 colony2 = colonies[j]
                 path_positions = self.calculate_path(colony1, colony2)
-                path = Path(colony1, colony2, path_positions)
+                path = Path(colony1, colony2, path_positions, game_map)
                 self.all_paths.append(path)
-
-                print(f"  {path} - Value: {path.get_value()
-                                           }, Efficiency: {path.get_efficiency():.2f}")
-
-        print(f"Total paths created: {len(self.all_paths)}\n")
         self.initialized = True
 
     def calculate_path(self, starting_colony, target_colony):
@@ -45,7 +40,6 @@ class Bot:
         path = []
         current = starting_colony.position
         target = target_colony.position
-
         while current != target:
             if current.x < target.x:
                 current = Position(current.x + 1, current.y)
@@ -57,7 +51,6 @@ class Bot:
                 current = Position(current.x, current.y - 1)
             if current != target:
                 path.append(current)
-
         return path
 
     def rank_paths_by_efficiency(self):
@@ -67,24 +60,15 @@ class Bot:
             key=lambda p: p.get_efficiency(),
             reverse=True
         )
-
-        print("\n=== Top 3 Paths by Efficiency ===")
-        for i, path in enumerate(sorted_paths[:3]):
-            print(f"{i+1}. {path} - Efficiency: {path.get_efficiency():.2f}")
-
         return sorted_paths
 
     def allocate_biomass(self, ranked_paths, game_message: TeamGameState):
         """Allocate biomass to paths and create actions"""
         actions = []
-
         remaining_budget = min(
             game_message.maximumNumberOfBiomassPerTurn,
             game_message.availableBiomass
         )
-
-        print(f"\n=== Allocating Biomass (Budget: {remaining_budget}) ===")
-
         for path in ranked_paths:
             if remaining_budget <= 0:
                 break
@@ -93,46 +77,39 @@ class Bot:
                 continue  # Path already complete
             to_place = min(needed, remaining_budget)
 
-            print(f"  {path}")
-            print(f"    Current: {path.get_current_biomass(game_message.map)}, Target: {
-                  path.get_value()}, Needed: {needed}, Placing: {to_place}")
-
-            # Create actions to place biomass on this path
+            # Create actions
             path_actions = self.create_actions_for_path(
                 path, to_place, game_message.map)
             actions.extend(path_actions)
 
-            # Update our budget
+            # Update budget
             remaining_budget -= to_place
 
         return actions
 
     def create_actions_for_path(self, path: Path, amount_to_place: int, game_map: GameMap):
-        """Create actions to place biomass evenly on path tiles"""
+        """Create actions to place biomass evenly on path"""
         actions = []
-
-        tiles = [(pos, game_map.biomass[pos.x][pos.y])
-                 for pos in path.positions]
-
-        # Sort, emptiest first
+        if len(path.biomass_positions) == 0:
+            return actions
+        tiles = []
+        for pos in path.biomass_positions:
+            current_biomass = game_map.biomass[pos.x][pos.y]
+            tiles.append((pos, current_biomass))
+        # Sort by current biomass (Start with least filled)
         tiles.sort(key=lambda t: t[1])
-
         remaining = amount_to_place
-        tile_index = 0
-
+        index = 0
         while remaining > 0:
-            pos, current = tiles[tile_index]
+            pos, current_biomass = tiles[index]
             actions.append(AddBiomassAction(
                 position=pos,
                 amount=1
             ))
-
-            tiles[tile_index] = (pos, current + 1)
+            tiles[index] = (pos, current_biomass + 1)
             remaining -= 1
-
-            tile_index = (tile_index + 1) % len(tiles)
-
-            if tile_index == 0:  # Completed a round
+            index = (index + 1) % len(tiles)
+            # Trier à chaque boucle
+            if (index == 0):
                 tiles.sort(key=lambda t: t[1])
-
         return actions
