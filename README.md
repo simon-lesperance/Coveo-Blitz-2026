@@ -31,3 +31,14 @@ Les dépendances Python peuvent être installées via pip:
 
 Ou sur Arch Linux via pacman:
 `sudo pacman -S python-websockets python-dataclasses-json`
+
+## Fonctionnement du bot
+Le bot priorise les chemins qui apportent le meilleur rapport coût/bénéfice.
+Quand il des chemins sont en cours, il essaie de compléter ceux-ci avant d'en démarrer de nouveaux.
+Le bot
+
+## Améliorations possibles
+- Prioriser les chemins interconnectés
+- Mieux gérer (corriger) la réallocation de biomasse (Si un chemin perd en valeur, il faut la réallouer ailleurs)
+- Garder une réserve de biomasse
+- Limiter les chemins incomplets
