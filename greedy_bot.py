@@ -15,7 +15,7 @@ class Bot:
         if not self.initialized:
             self._initialize(game_message.map)
 
-       # Reevaluate paths every 5 ticks
+            # Réévaluer les chemins toutes les 5 ticks
         if game_message.currentTickNumber - self.last_reeval_tick >= 5:
             self._reevaluate_paths(game_message.map)
             self.last_reeval_tick = game_message.currentTickNumber
@@ -24,7 +24,7 @@ class Bot:
                      game_message.availableBiomass)
         actions = []
 
-        # Phase 1: Remove excess biomass
+        # Enlever la biomasse en excès
         excess = self.strategy.get_excess_tiles(game_message.map)
         if excess:
             removal_budget = min(budget // 2, len(excess))
@@ -32,7 +32,7 @@ class Bot:
             actions.extend(removed)
             budget -= len(removed)
 
-        # Phase 2: Build/upgrade priority paths
+        # Construire les chemins prioritaires (en cours ou efficaces)
         priority_paths = self.strategy.get_priority_paths(game_message.map)
 
         for path in priority_paths:
@@ -66,7 +66,6 @@ class Bot:
                 path = Path(colonies[i], colonies[j], positions, game_map)
                 self.all_possible_paths.append(path)
 
-        # Select initial active paths
         self._reevaluate_paths(game_map)
         self.initialized = True
 
@@ -74,11 +73,11 @@ class Bot:
         self.all_possible_paths.sort(
             key=lambda p: p.get_efficiency(), reverse=True)
 
-        # Limit active paths
+        # Limiter les chemins à la map
         max_paths = min(len(self.all_possible_paths),
                         game_map.width + game_map.height)
 
-        # Keep paths that already have biomass invested
+        # Garder les chemins en cours
         invested_paths = [p for p in self.all_possible_paths
                           if p.get_current_biomass(game_map) > 0]
 

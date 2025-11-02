@@ -77,19 +77,19 @@ class Strategy:
         removals.sort(key=lambda r: r[1], reverse=True)
         return removals
 
+    # Abandonne un chemin si la valeur est inférieure à un poucentage de la biomasse investie
     def should_abandon_path(self, path: Path, game_map: GameMap) -> bool:
-        """Check if a started path should be abandoned due to value drop"""
         if not path.is_started(game_map) or path.is_complete(game_map):
             return False
 
         current_value = path.get_value()
         invested = path.get_current_biomass(game_map)
 
-        # More aggressive abandonment for low-biomass maps
+        # Pourcentage dépendant de la carte
         total_biomass_on_map = sum(sum(row) for row in game_map.biomass)
 
         if total_biomass_on_map < 15:  # Rythmic Rings
-            return current_value < invested * 0.7  # if value < 70% of investment
+            return current_value < invested * 0.7  # < 70% investi
         else:
             return current_value < invested * 0.5  # Standard
 
