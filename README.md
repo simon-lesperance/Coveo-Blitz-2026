@@ -6,12 +6,24 @@
 -
 -
 
-## Utilisation
-1. Démarrer le serveur local: `make handler`
-2. Démarrer le client: `make bot`
+## Utilisation locale
+1. Renommer `bot_example.py` en `bot.py`
+2. Démarrer le serveur local: `make handler`
+3. Démarrer le client: `make bot`
 
 Les deux peuvent être démarrés en même temps avec `make run` mais il est recommandé de le faire séparément pour faciliter le débogage.
 Une fois le client démarré, l'interface graphique devrait s'ouvrir dans votre navigateur par défaut.
+
+Pour exécuter une carte spécifique, ne placez que cette dernière dans le dossier `linux-x64/maps/`.
+
+## Utilisation sur le serveur distant
+1. Renommer le bot désiré en `bot.py`
+2. Faire un zip avec les fichiers requis. Par exemple, pour le bot avec la solution greedy:
+```
+zip -r mon_bot.zip bot.py application.py game_message.py path.py strategy.py requirements.txt
+```
+ - Note: Le fichier requirements.txt est nécessaire.
+3. Déposer le zip sur le serveur distant via l'interface web de Coveo Blitz.
 
 ## Dépendances
 - Challenge Hors ligne
@@ -65,17 +77,20 @@ Il y a beaucoup de paramètres qui peuvent êtres ajustés pour affiner le compo
 
 ## Méthode basée sur la programmation linéaire
 ### Classes
-- `solve_all_maps.py`: Script principal pour calculer les solutions.
+- `solve_all_maps`: Script principal pour calculer les solutions.
     - Usage: `python solve_all_maps.py [nom_carte] <limite_temps>
     - Gère les entrées/sorties et fais les appels aux autres classes
-- `map_parser.py`: Lit et analyse les fichiers de carte.
+- `map_parser`: Lit et analyse les fichiers de carte.
     - Lit les fichiers de carte et extrait les informations nécessaires.
     - Par défaut, lit les fichiers du dossier `maps/`.
     - Contient des copies des cartes (pour tests)
-- `offline_solver.py`: Contient la logique principale pour résoudre le problème.
+- `offline_solver`: Contient la logique principale pour résoudre le problème.
     - Utilise `PuLP` pour formuler et résoudre le problème de programmation linéaire.
     - Définit les variables, contraintes et la fonction objectif.
     - Contient les valeurs pour ajuster le comportement du solveur.
+- `bot`: Génère les actions à partir de la solution du solveur.
+    - Identifie la carte actuelle et charge la solution correspondante.
+    - Convertit la solution du solveur en actions exploitables par le bot.
 
 ### Stratégie
 On définit le problème de la façon suivante:
