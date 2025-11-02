@@ -78,7 +78,7 @@ Il y a beaucoup de paramètres qui peuvent êtres ajustés pour affiner le compo
 ## Méthode basée sur la programmation linéaire
 ### Classes
 - `solve_all_maps`: Script principal pour calculer les solutions.
-    - Usage: `python solve_all_maps.py [nom_carte] <limite_temps>
+    - Usage: `python solve_all_maps.py (nom_carte) limite_temps
     - Gère les entrées/sorties et fais les appels aux autres classes
 - `map_parser`: Lit et analyse les fichiers de carte.
     - Lit les fichiers de carte et extrait les informations nécessaires.
@@ -105,3 +105,16 @@ On définit le problème de la façon suivante:
 
 - Objectif:
     - Maximiser le score total en fonction des connections entre paires de colonies.
+
+
+### Benchmarks
+- Parser Bot v1:
+ |       Map      |  Score  |
+ | -------------- | ------- |
+ | CrescentGarden |  10482  |
+ |   CrossRoads   |  12440  |
+ | OppositionDance|  2605   |
+ |   QuarterWave  |  3024   |
+ | RhythmicRings  |  500*   |
+ |  TimingMaster  |  3265   |
+
