@@ -8,7 +8,7 @@
 
 ## Utilisation
 1. Démarrer le serveur local: `make handler`
-2. Démarrer le client: `make client`
+2. Démarrer le client: `make bot`
 
 Les deux peuvent être démarrés en même temps avec `make run` mais il est recommandé de le faire séparément pour faciliter le débogage.
 Une fois le client démarré, l'interface graphique devrait s'ouvrir dans votre navigateur par défaut.
@@ -18,6 +18,7 @@ Une fois le client démarré, l'interface graphique devrait s'ouvrir dans votre 
 - Python 3.10+
 - websockets 15.0.1
 - dataclasses-json 0.6.7
+- PuLP 2.7.0 (pour la méthode basée sur la programmation linéaire)
 
 Le challenge peut être téléchargé via
 ```
@@ -27,10 +28,10 @@ rm -rf blitz-registration-challenge-linux-x64.zip
 ```
 
 Les dépendances Python peuvent être installées via pip:
-`pip install websockets dataclasses-json`
+`pip install websockets dataclasses-json pulp`
 
 Ou sur Arch Linux via pacman:
-`sudo pacman -S python-websockets python-dataclasses-json`
+`yay -S python-websockets python-dataclasses-json python-pulp`
 
 ## Bot "Greedy"
 Le fichier `greedy_bot.py` contient un bot utilisant un algorithme glouton. Le fichier application ne devrait pas être modifié. Pour utiliser un bot différent, renomez le fichier en `bot.py`.
@@ -60,3 +61,32 @@ Il y a beaucoup de paramètres qui peuvent êtres ajustés pour affiner le compo
     - `MIN_VALUE_THRESHOLD` (Stratégie): Valeur minimale pour qu'un chemin soit considéré
     - `should_abandon_path` (Stratégie): Les ratios pour abandonner un chemin
     - `get_value()` (Path): La fonction contient le nombre de tour pour la valeur future
+
+
+## Méthode basée sur la programmation linéaire
+### Classes
+- `solve_all_maps.py`: Script principal pour calculer les solutions.
+    - Usage: `python solve_all_maps.py [nom_carte] <limite_temps>
+    - Gère les entrées/sorties et fais les appels aux autres classes
+- `map_parser.py`: Lit et analyse les fichiers de carte.
+    - Lit les fichiers de carte et extrait les informations nécessaires.
+    - Par défaut, lit les fichiers du dossier `maps/`.
+    - Contient des copies des cartes (pour tests)
+- `offline_solver.py`: Contient la logique principale pour résoudre le problème.
+    - Utilise `PuLP` pour formuler et résoudre le problème de programmation linéaire.
+    - Définit les variables, contraintes et la fonction objectif.
+    - Contient les valeurs pour ajuster le comportement du solveur.
+
+### Stratégie
+On définit le problème de la façon suivante:
+- Variables:
+    - Biomasse(x, y, t): Quantité de biomasse sur une tuile (x, y) au tick t
+    - Flow(i, t): Flux de biomasse sur le chemin i au tick t
+
+- Contraintes:
+    - La biomasse doit être sur un chemin (flow)
+    - Le nombre d'action doit respecter le budget
+    - La biomasse totale doit respecter la capacité maximale
+
+- Objectif:
+    - Maximiser le score total en fonction des connections entre paires de colonies.
