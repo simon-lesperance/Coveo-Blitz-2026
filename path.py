@@ -16,9 +16,9 @@ class Path:
 
     # Estime la valeur du chemin en fonction des valeurs futures
     def get_value(self) -> float:
-        future1 = self.colony1.futureNutrients[:10] if self.colony1.futureNutrients else [
+        future1 = self.colony1.futureNutrients[:3] if self.colony1.futureNutrients else [
         ]
-        future2 = self.colony2.futureNutrients[:10] if self.colony2.futureNutrients else [
+        future2 = self.colony2.futureNutrients[:3] if self.colony2.futureNutrients else [
         ]
 
         if not future1 or not future2:
@@ -28,7 +28,7 @@ class Path:
         future_mins = [min(future1[i], future2[i]) for i in range(min_len)]
         current_min = min(self.colony1.nutrients, self.colony2.nutrients)
 
-        return (current_min + sum(future_mins)) / (len(future_mins) + 1)
+        return current_min * 0.6 + (sum(future_mins) / len(future_mins)) * 0.4
 
         # Estime l'efficacité du chemin (valeur / longueur)
     def get_efficiency(self) -> float:
