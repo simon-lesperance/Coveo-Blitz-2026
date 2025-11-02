@@ -11,18 +11,25 @@ class Strategy:
         in_progress = []
         not_started = []
 
-        for path in self.paths:
-            if path.is_complete(game_map):
-                continue
-            elif path.is_started(game_map):
-                in_progress.append(path)
-            else:
-                not_started.append(path)
+        # Seuil minimum
+        all_values = [p.get_value() for p in self.paths]
+        median_value = sorted(all_values)[len(
+            all_values) // 2] if all_values else 0
+        MIN_VALUE_THRESHOLD = max(2, median_value * 0.3)
 
-        in_progress.sort(key=lambda p: p.get_completion(
-            game_map), reverse=True)
-        not_started.sort(key=lambda p: (
-            p.get_efficiency(), -p.length), reverse=True)
+        for path in self.paths:
+            current_value = path.get_value()
+            bottleneck = path.get_bottleneck(game_map)
+
+            if bottleneck < current_value * 0.95:
+                if path.is_started(game_map):
+                    in_progress.append(path)
+                elif current_value >= MIN_VALUE_THRESHOLD:
+                    not_started.append(path)
+
+        in_progress.sort(key=lambda p: (p.get_value(
+        ) - p.get_bottleneck(game_map)) / max(p.get_value(), 0.1), reverse=True)
+        not_started.sort(key=lambda p: p.get_efficiency(), reverse=True)
 
         return in_progress + not_started
 
@@ -41,20 +48,17 @@ class Strategy:
         tiles.sort(key=lambda t: t['current'])
         return tiles
 
-    # Identifie les tuiles avec un excès de biomasse
     def get_excess_tiles(self, game_map: GameMap) -> list[tuple]:
         tile_max_needed = {}
 
         for path in self.paths:
-            if path.is_complete(game_map):
+            if self.should_abandon_path(path, game_map):
                 continue
+
             target = int(path.get_value())
             for pos in path.positions:
                 key = (pos.x, pos.y)
-                if key not in tile_max_needed:
-                    tile_max_needed[key] = target
-                else:
-                    tile_max_needed[key] = max(tile_max_needed[key], target)
+                tile_max_needed[key] = max(tile_max_needed.get(key, 0), target)
 
         removals = []
         for x in range(game_map.width):
@@ -72,6 +76,22 @@ class Strategy:
 
         removals.sort(key=lambda r: r[1], reverse=True)
         return removals
+
+    def should_abandon_path(self, path: Path, game_map: GameMap) -> bool:
+        """Check if a started path should be abandoned due to value drop"""
+        if not path.is_started(game_map) or path.is_complete(game_map):
+            return False
+
+        current_value = path.get_value()
+        invested = path.get_current_biomass(game_map)
+
+        # More aggressive abandonment for low-biomass maps
+        total_biomass_on_map = sum(sum(row) for row in game_map.biomass)
+
+        if total_biomass_on_map < 15:  # Rythmic Rings
+            return current_value < invested * 0.7  # if value < 70% of investment
+        else:
+            return current_value < invested * 0.5  # Standard
 
 
 class Actions:
