@@ -1,8 +1,5 @@
 from game_message import Position, Colony, GameMap
 
-"""Classe représentant un chemin entre deux colonies."""
-
-
 class Path:
     def __init__(self, colony1: Colony, colony2: Colony, positions: list[Position], game_map: GameMap):
         self.colony1 = colony1
@@ -14,7 +11,7 @@ class Path:
     def _is_colony(self, pos: Position, game_map: GameMap) -> bool:
         return any(c.position.x == pos.x and c.position.y == pos.y for c in game_map.colonies)
 
-    # Estime la valeur du chemin en fonction des valeurs futures
+    # Estime la valeur du chemin en fonction du min des 3 prochains tours
     def get_value(self) -> float:
         future1 = self.colony1.futureNutrients[:3] if self.colony1.futureNutrients else [
         ]
