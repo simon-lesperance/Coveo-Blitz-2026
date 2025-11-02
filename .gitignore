@@ -2,3 +2,7 @@ __pycache__/
 linux-x64/
 bot.bkp
 *.zip
+benchmarks.txt
+bot.py
+analyze_solutions.py
+test_playback.py
