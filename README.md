@@ -3,7 +3,7 @@
 
 ## Équipe - Confidently Wrong
 - Simon Lespérance
--
+- Sublime Tshimpangila
 -
 
 ## Utilisation
