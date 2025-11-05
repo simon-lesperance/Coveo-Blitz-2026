@@ -1,5 +1,8 @@
+""" Module pour lire et analyser les fichiers TMX et charger les données des colonies"""
+
 import xml.etree.ElementTree as ET
 import os
+import json
 
 
 def parse_tmx_map(tmx_file):
@@ -10,7 +13,7 @@ def parse_tmx_map(tmx_file):
     width = int(root.get('width'))
     height = int(root.get('height'))
 
-    # Trouve les colonies
+    # Layer de colonies
     colony_layer = root.find(".//layer[@name='Colony']")
     if colony_layer is None:
         raise ValueError("No Colony layer found in TMX file")
@@ -21,7 +24,6 @@ def parse_tmx_map(tmx_file):
 
     data_text = data.text.strip()
 
-    # Parse les données
     rows = []
     for line in data_text.split('\n'):
         line = line.strip()
@@ -35,11 +37,6 @@ def parse_tmx_map(tmx_file):
         if values:
             rows.append(values)
 
-    # Valider dimensions
-    if len(rows) != height:
-        print(f"  Warning: Expected {height} rows, got {len(rows)}")
-
-    # Extraire les colonies
     colonies = []
     for y in range(min(height, len(rows))):
         row = rows[y]
@@ -51,7 +48,7 @@ def parse_tmx_map(tmx_file):
                     'type': row[x]
                 })
 
-    # Parse metadata
+    # Metadata
     meta = root.find(".//objectgroup[@name='Meta']/properties")
     if meta is None:
         raise ValueError("No Meta properties found in TMX file")
@@ -61,14 +58,6 @@ def parse_tmx_map(tmx_file):
         name = prop.get('name')
         value = prop.get('value')
         properties[name] = value
-
-    # Ajouter les changement de valeurs
-    for colony in colonies:
-        phase_key = f"colony{colony['id']}PhaseShift"
-        if phase_key in properties:
-            colony['phaseShift'] = float(properties[phase_key])
-        else:
-            colony['phaseShift'] = 0.0
 
     config = {
         'name': properties.get('name', 'Unknown'),
@@ -83,8 +72,24 @@ def parse_tmx_map(tmx_file):
     return config
 
 
-def parse_all_maps(maps_directory='maps'):
-    # Parse toutes les cartes .tmx dans le répertoire maps/
+def load_colony_data(colony_data_file):
+    # Charge les données des colonies à partir d'un fichier JSON
+    with open(colony_data_file, 'r') as f:
+        data = json.load(f)
+    return data['colonies']
+
+
+def parse_all_maps(maps_directory='maps', use_real_data=True):
+    """
+    Charge tous les fichiers TMX. Optionellement, si les données receuillies 
+    par le data_bot sont disponibles, charge les futureNutrients pour chaque colonies.
+    Si jamais le répertoire n'existe pas ou qu'aucun fichier TMX n'est trouvé,
+    utilise une configuration de test hardcodée.
+
+    Args:
+        maps_directory: Répertoire contenant les fichiers TMX et JSON
+        use_real_data: Si True, tente de charger les données réelles des colonies
+    """
     configs = {}
 
     if not os.path.exists(maps_directory):
@@ -104,9 +109,27 @@ def parse_all_maps(maps_directory='maps'):
         try:
             filepath = os.path.join(maps_directory, tmx_file)
             config = parse_tmx_map(filepath)
+
+            if use_real_data:
+                colony_data_file = os.path.join(
+                    maps_directory,
+                    f"{config['name']}_colony_data.json"
+                )
+
+                if os.path.exists(colony_data_file):
+                    real_colonies = load_colony_data(colony_data_file)
+                    config['colonies'] = real_colonies
+                    print(f"  ✓ {config['name']:20s} - {config['width']}x{config['height']}, {
+                          len(config['colonies'])} colonies ({config['difficulty']}) [REAL DATA]")
+                else:
+                    print(f"  ⚠ {config['name']:20s} - {config['width']}x{config['height']}, {len(
+                        config['colonies'])} colonies ({config['difficulty']}) [NO REAL DATA - using formula]")
+            else:
+                print(f"  ✓ {config['name']:20s} - {config['width']}x{config['height']}, {
+                      len(config['colonies'])} colonies ({config['difficulty']})")
+
             configs[config['name']] = config
-            print(f"  ✓ {config['name']:20s} - {config['width']}x{config['height']}, {
-                  len(config['colonies'])} colonies ({config['difficulty']})")
+
         except Exception as e:
             print(f"  ✗ Error parsing {tmx_file}: {e}")
 
@@ -118,7 +141,7 @@ def parse_all_maps(maps_directory='maps'):
 
 
 def get_test_configs():
-    """Configuration hard-codées pour des tests"""
+    """ Valeurs de test hardcodées si aucun fichier TMX n'est trouvé """
     return {
         'CrossRoads': {
             'name': 'CrossRoads',
@@ -128,11 +151,11 @@ def get_test_configs():
             'totalBiomass': 30,
             'maxBiomassPerTurn': 6,
             'colonies': [
-                {'id': 0, 'position': {'x': 4, 'y': 4}, 'phaseShift': 0},
-                {'id': 1, 'position': {'x': 7, 'y': 4}, 'phaseShift': 1},
-                {'id': 2, 'position': {'x': 4, 'y': 1}, 'phaseShift': 0.5},
-                {'id': 3, 'position': {'x': 4, 'y': 7}, 'phaseShift': 1.5},
-                {'id': 4, 'position': {'x': 1, 'y': 4}, 'phaseShift': 0}
+                {'id': 0, 'position': {'x': 4, 'y': 4}},
+                {'id': 1, 'position': {'x': 7, 'y': 4}},
+                {'id': 2, 'position': {'x': 4, 'y': 1}},
+                {'id': 3, 'position': {'x': 4, 'y': 7}},
+                {'id': 4, 'position': {'x': 1, 'y': 4}}
             ]
         },
         'OppositionDance': {
@@ -143,10 +166,10 @@ def get_test_configs():
             'totalBiomass': 45,
             'maxBiomassPerTurn': 9,
             'colonies': [
-                {'id': 0, 'position': {'x': 1, 'y': 1}, 'phaseShift': 0},
-                {'id': 1, 'position': {'x': 8, 'y': 1}, 'phaseShift': 1},
-                {'id': 2, 'position': {'x': 8, 'y': 8}, 'phaseShift': 0},
-                {'id': 3, 'position': {'x': 1, 'y': 8}, 'phaseShift': 1}
+                {'id': 0, 'position': {'x': 1, 'y': 1}},
+                {'id': 1, 'position': {'x': 8, 'y': 1}},
+                {'id': 2, 'position': {'x': 8, 'y': 8}},
+                {'id': 3, 'position': {'x': 1, 'y': 8}}
             ]
         },
         'QuarterWave': {
@@ -157,10 +180,10 @@ def get_test_configs():
             'totalBiomass': 32,
             'maxBiomassPerTurn': 8,
             'colonies': [
-                {'id': 0, 'position': {'x': 5, 'y': 3}, 'phaseShift': 0},
-                {'id': 1, 'position': {'x': 1, 'y': 7}, 'phaseShift': 0.5},
-                {'id': 2, 'position': {'x': 3, 'y': 5}, 'phaseShift': 1},
-                {'id': 3, 'position': {'x': 7, 'y': 1}, 'phaseShift': 1.5}
+                {'id': 0, 'position': {'x': 5, 'y': 3}},
+                {'id': 1, 'position': {'x': 1, 'y': 7}},
+                {'id': 2, 'position': {'x': 3, 'y': 5}},
+                {'id': 3, 'position': {'x': 7, 'y': 1}}
             ]
         },
         'CrescentGarden': {
@@ -171,12 +194,11 @@ def get_test_configs():
             'totalBiomass': 35,
             'maxBiomassPerTurn': 7,
             'colonies': [
-                {'id': 0, 'position': {'x': 5, 'y': 3}, 'phaseShift': 0},
-                {'id': 1, 'position': {'x': 1, 'y': 3}, 'phaseShift': 1},
-                {'id': 2, 'position': {'x': 9, 'y': 3}, 'phaseShift': 0},
-                {'id': 3, 'position': {'x': 7, 'y': 1}, 'phaseShift': 1},
-                {'id': 4, 'position': {'x': 3, 'y': 5}, 'phaseShift': 0.5},
-                {'id': 5, 'position': {'x': 7, 'y': 5}, 'phaseShift': 1.5}
+                {'id': 0, 'position': {'x': 5, 'y': 3}},
+                {'id': 1, 'position': {'x': 1, 'y': 3}},
+                {'id': 2, 'position': {'x': 9, 'y': 3}},
+                {'id': 3, 'position': {'x': 7, 'y': 1}},
+                {'id': 4, 'position': {'x': 3, 'y': 5}}
             ]
         },
         'TimingMaster': {
@@ -187,10 +209,10 @@ def get_test_configs():
             'totalBiomass': 36,
             'maxBiomassPerTurn': 8,
             'colonies': [
-                {'id': 0, 'position': {'x': 9, 'y': 5}, 'phaseShift': 0},
-                {'id': 1, 'position': {'x': 9, 'y': 1}, 'phaseShift': 0},
-                {'id': 2, 'position': {'x': 2, 'y': 1}, 'phaseShift': 1},
-                {'id': 3, 'position': {'x': 2, 'y': 5}, 'phaseShift': 0.5}
+                {'id': 0, 'position': {'x': 9, 'y': 5}},
+                {'id': 1, 'position': {'x': 9, 'y': 1}},
+                {'id': 2, 'position': {'x': 2, 'y': 1}},
+                {'id': 3, 'position': {'x': 2, 'y': 5}}
             ]
         },
         'RhythmicRings': {
@@ -201,21 +223,24 @@ def get_test_configs():
             'totalBiomass': 9,
             'maxBiomassPerTurn': 3,
             'colonies': [
-                {'id': 0, 'position': {'x': 5, 'y': 1}, 'phaseShift': 0},
-                {'id': 1, 'position': {'x': 2, 'y': 2}, 'phaseShift': 1.75},
-                {'id': 2, 'position': {'x': 8, 'y': 2}, 'phaseShift': 0.25},
-                {'id': 3, 'position': {'x': 1, 'y': 5}, 'phaseShift': 1.5},
-                {'id': 4, 'position': {'x': 9, 'y': 5}, 'phaseShift': 0.5},
-                {'id': 5, 'position': {'x': 2, 'y': 8}, 'phaseShift': 1.25},
-                {'id': 6, 'position': {'x': 8, 'y': 8}, 'phaseShift': 0.75},
-                {'id': 7, 'position': {'x': 5, 'y': 9}, 'phaseShift': 1}
+                {'id': 0, 'position': {'x': 5, 'y': 1}},
+                {'id': 1, 'position': {'x': 2, 'y': 2}},
+                {'id': 2, 'position': {'x': 8, 'y': 2}},
+                {'id': 3, 'position': {'x': 1, 'y': 5}},
+                {'id': 4, 'position': {'x': 9, 'y': 5}},
+                {'id': 5, 'position': {'x': 2, 'y': 8}},
+                {'id': 6, 'position': {'x': 8, 'y': 8}},
+                {'id': 7, 'position': {'x': 5, 'y': 9}}
             ]
         }
     }
 
 
 if __name__ == "__main__":
-    configs = parse_all_maps()
+    import sys
+
+    maps_dir = sys.argv[1] if len(sys.argv) > 1 else 'maps'
+    configs = parse_all_maps(maps_dir, use_real_data=True)
 
     print(f"\n{'='*60}")
     print("PARSED CONFIGURATIONS")
@@ -228,6 +253,9 @@ if __name__ == "__main__":
         print(f"  Biomass: {config['totalBiomass']
                             } (max {config['maxBiomassPerTurn']}/turn)")
         print(f"  Colonies: {len(config['colonies'])}")
-        for col in config['colonies']:
-            print(f"    Colony {col['id']}: ({col['position']['x']}, {
-                  col['position']['y']}) phase={col['phaseShift']}")
+
+        if config['colonies'] and 'futureNutrients' in config['colonies'][0]:
+            future_len = len(config['colonies'][0]['futureNutrients'])
+            print(f"  ✓ Has real futureNutrients data ({future_len} ticks)")
+        else:
+            print(f"  ⚠ No futureNutrients - will use formula")

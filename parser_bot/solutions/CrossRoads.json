@@ -1,0 +1,3684 @@
+{
+  "map_name": "CrossRoads",
+  "total_ticks": 351,
+  "actions": {
+    "0": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 2,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 3,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 2
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 3
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 5
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 6
+        },
+        "amount": 1
+      }
+    ],
+    "1": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 2,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 3,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 2
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 3
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 5
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 6
+        },
+        "amount": 1
+      }
+    ],
+    "2": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 2,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 3,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 2
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 3
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 5
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 6
+        },
+        "amount": 1
+      }
+    ],
+    "3": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 2,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 3,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 2
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 3
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 5
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 6
+        },
+        "amount": 1
+      }
+    ],
+    "4": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 2,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 3,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 2
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 3
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 5
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 6
+        },
+        "amount": 1
+      }
+    ],
+    "5": [],
+    "6": [
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 2,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 3,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 5
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 6
+        },
+        "amount": 1
+      }
+    ],
+    "7": [
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 2,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 3,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 2
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 3
+        },
+        "amount": 1
+      }
+    ],
+    "8": [
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 2,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 3,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 5
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 6
+        },
+        "amount": 1
+      }
+    ],
+    "9": [
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 2,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 3,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 2
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 3
+        },
+        "amount": 1
+      }
+    ],
+    "10": [],
+    "11": [],
+    "12": [],
+    "13": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 2
+        },
+        "amount": 3
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 2
+        },
+        "amount": 3
+      }
+    ],
+    "14": [],
+    "15": [],
+    "16": [],
+    "17": [],
+    "18": [],
+    "19": [],
+    "20": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 2,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 3,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 5
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 6
+        },
+        "amount": 1
+      }
+    ],
+    "21": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 2,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 3,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 2
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 3
+        },
+        "amount": 1
+      }
+    ],
+    "22": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 2,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 3,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 2
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 3
+        },
+        "amount": 1
+      }
+    ],
+    "23": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 2,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 3,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 5
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 6
+        },
+        "amount": 1
+      }
+    ],
+    "24": [],
+    "25": [],
+    "26": [],
+    "27": [
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 2,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 3,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 5,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 6,
+          "y": 4
+        },
+        "amount": 1
+      }
+    ],
+    "28": [
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 5
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 6
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 5,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 6,
+          "y": 4
+        },
+        "amount": 1
+      }
+    ],
+    "29": [
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 2
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 3
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 5,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 6,
+          "y": 4
+        },
+        "amount": 1
+      }
+    ],
+    "30": [],
+    "31": [],
+    "32": [],
+    "33": [],
+    "34": [],
+    "35": [],
+    "36": [],
+    "37": [],
+    "38": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 6
+        },
+        "amount": 3
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 6
+        },
+        "amount": 3
+      }
+    ],
+    "39": [
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 5
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 6
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 5,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 6,
+          "y": 4
+        },
+        "amount": 1
+      }
+    ],
+    "40": [],
+    "41": [],
+    "42": [],
+    "43": [],
+    "44": [],
+    "45": [],
+    "46": [],
+    "47": [],
+    "48": [
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 2
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 3
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 5
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 6
+        },
+        "amount": 1
+      }
+    ],
+    "49": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 2
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 3
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 5,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 6,
+          "y": 4
+        },
+        "amount": 1
+      }
+    ],
+    "50": [
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 5
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 6
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 5,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 6,
+          "y": 4
+        },
+        "amount": 1
+      }
+    ],
+    "51": [],
+    "52": [],
+    "53": [],
+    "54": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 5
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 6
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 5,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 6,
+          "y": 4
+        },
+        "amount": 1
+      }
+    ],
+    "55": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 8,
+          "y": 7
+        },
+        "amount": 3
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 8,
+          "y": 7
+        },
+        "amount": 3
+      }
+    ],
+    "56": [],
+    "57": [],
+    "58": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 2,
+          "y": 4
+        },
+        "amount": 3
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 2,
+          "y": 4
+        },
+        "amount": 3
+      }
+    ],
+    "59": [],
+    "60": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 3,
+          "y": 4
+        },
+        "amount": 3
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 3,
+          "y": 4
+        },
+        "amount": 3
+      }
+    ],
+    "61": [],
+    "62": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 6,
+          "y": 4
+        },
+        "amount": 3
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 6,
+          "y": 4
+        },
+        "amount": 3
+      }
+    ],
+    "63": [],
+    "64": [],
+    "65": [],
+    "66": [],
+    "67": [],
+    "68": [],
+    "69": [],
+    "70": [],
+    "71": [],
+    "72": [],
+    "73": [],
+    "74": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 0,
+          "y": 6
+        },
+        "amount": 3
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 0,
+          "y": 6
+        },
+        "amount": 3
+      }
+    ],
+    "75": [],
+    "76": [],
+    "77": [],
+    "78": [],
+    "79": [],
+    "80": [
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 2
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 3
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 5,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 6,
+          "y": 4
+        },
+        "amount": 1
+      }
+    ],
+    "81": [
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 5
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 6
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 5,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 6,
+          "y": 4
+        },
+        "amount": 1
+      }
+    ],
+    "82": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 2,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 3,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 2
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 3
+        },
+        "amount": 1
+      }
+    ],
+    "83": [],
+    "84": [],
+    "85": [],
+    "86": [
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 2
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 3
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 5
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 6
+        },
+        "amount": 1
+      }
+    ],
+    "87": [
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 2
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 3
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 5
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 6
+        },
+        "amount": 1
+      }
+    ],
+    "88": [],
+    "89": [],
+    "90": [],
+    "91": [],
+    "92": [],
+    "93": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 6,
+          "y": 4
+        },
+        "amount": 3
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 6,
+          "y": 4
+        },
+        "amount": 3
+      }
+    ],
+    "94": [],
+    "95": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 6
+        },
+        "amount": 3
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 6
+        },
+        "amount": 3
+      }
+    ],
+    "96": [],
+    "97": [],
+    "98": [],
+    "99": [],
+    "100": [],
+    "101": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 2
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 3
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 5,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 6,
+          "y": 4
+        },
+        "amount": 1
+      }
+    ],
+    "102": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 2
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 3
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 5,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 6,
+          "y": 4
+        },
+        "amount": 1
+      }
+    ],
+    "103": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 2
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 3
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 5,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 6,
+          "y": 4
+        },
+        "amount": 1
+      }
+    ],
+    "104": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 2
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 3
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 5,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 6,
+          "y": 4
+        },
+        "amount": 1
+      }
+    ],
+    "105": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 2
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 3
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 5,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 6,
+          "y": 4
+        },
+        "amount": 1
+      }
+    ],
+    "106": [],
+    "107": [],
+    "108": [],
+    "109": [],
+    "110": [],
+    "111": [],
+    "112": [],
+    "113": [],
+    "114": [],
+    "115": [],
+    "116": [],
+    "117": [],
+    "118": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 2,
+          "y": 4
+        },
+        "amount": 3
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 2,
+          "y": 4
+        },
+        "amount": 3
+      }
+    ],
+    "119": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 3
+        },
+        "amount": 3
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 3
+        },
+        "amount": 3
+      }
+    ],
+    "120": [],
+    "121": [],
+    "122": [],
+    "123": [],
+    "124": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 3
+        },
+        "amount": 3
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 3
+        },
+        "amount": 3
+      }
+    ],
+    "125": [],
+    "126": [],
+    "127": [],
+    "128": [],
+    "129": [],
+    "130": [],
+    "131": [],
+    "132": [],
+    "133": [],
+    "134": [],
+    "135": [],
+    "136": [],
+    "137": [],
+    "138": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 3,
+          "y": 4
+        },
+        "amount": 3
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 3,
+          "y": 4
+        },
+        "amount": 3
+      }
+    ],
+    "139": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 2
+        },
+        "amount": 3
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 2
+        },
+        "amount": 3
+      }
+    ],
+    "140": [],
+    "141": [],
+    "142": [],
+    "143": [],
+    "144": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 2,
+          "y": 4
+        },
+        "amount": 3
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 2,
+          "y": 4
+        },
+        "amount": 3
+      }
+    ],
+    "145": [],
+    "146": [],
+    "147": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 6
+        },
+        "amount": 3
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 6
+        },
+        "amount": 3
+      }
+    ],
+    "148": [],
+    "149": [
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 5
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 6
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 5,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 6,
+          "y": 4
+        },
+        "amount": 1
+      }
+    ],
+    "150": [
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 2
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 3
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 5,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 6,
+          "y": 4
+        },
+        "amount": 1
+      }
+    ],
+    "151": [
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 2,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 3,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 5,
+          "y": 4
+        },
+        "amount": 2
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 5,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 6,
+          "y": 4
+        },
+        "amount": 1
+      }
+    ],
+    "152": [
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 5
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 6
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 5,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 6,
+          "y": 4
+        },
+        "amount": 1
+      }
+    ],
+    "153": [],
+    "154": [],
+    "155": [],
+    "156": [],
+    "157": [],
+    "158": [],
+    "159": [],
+    "160": [],
+    "161": [],
+    "162": [],
+    "163": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 5
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 6
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 5,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 6,
+          "y": 4
+        },
+        "amount": 1
+      }
+    ],
+    "164": [],
+    "165": [],
+    "166": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 5
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 6
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 5,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 6,
+          "y": 4
+        },
+        "amount": 1
+      }
+    ],
+    "167": [
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 5
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 6
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 5,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 6,
+          "y": 4
+        },
+        "amount": 1
+      }
+    ],
+    "168": [],
+    "169": [],
+    "170": [],
+    "171": [],
+    "172": [],
+    "173": [],
+    "174": [],
+    "175": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 2,
+          "y": 4
+        },
+        "amount": 3
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 2,
+          "y": 4
+        },
+        "amount": 3
+      }
+    ],
+    "176": [],
+    "177": [],
+    "178": [],
+    "179": [],
+    "180": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 5,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 5,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 6,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 6,
+          "y": 4
+        },
+        "amount": 1
+      }
+    ],
+    "181": [],
+    "182": [],
+    "183": [],
+    "184": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 6
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 6
+        },
+        "amount": 1
+      }
+    ],
+    "185": [
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 2
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 3
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 5,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 6,
+          "y": 4
+        },
+        "amount": 1
+      }
+    ],
+    "186": [],
+    "187": [
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 2
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 3
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 5
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 6
+        },
+        "amount": 1
+      }
+    ],
+    "188": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 2,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 3,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 2
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 3
+        },
+        "amount": 1
+      }
+    ],
+    "189": [
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 2
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 3
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 6
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 6
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 5,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 6,
+          "y": 4
+        },
+        "amount": 1
+      }
+    ],
+    "190": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 3,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 3,
+          "y": 4
+        },
+        "amount": 1
+      }
+    ],
+    "191": [],
+    "192": [],
+    "193": [],
+    "194": [],
+    "195": [],
+    "196": [],
+    "197": [],
+    "198": [],
+    "199": [],
+    "200": [],
+    "201": [],
+    "202": [],
+    "203": [],
+    "204": [],
+    "205": [],
+    "206": [],
+    "207": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 2
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 3
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 5
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 6
+        },
+        "amount": 1
+      }
+    ],
+    "208": [
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 2,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 3,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 2
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 3
+        },
+        "amount": 1
+      }
+    ],
+    "209": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 3,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 3,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 2
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 3
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 5,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 6,
+          "y": 4
+        },
+        "amount": 1
+      }
+    ],
+    "210": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 2
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 3
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 5,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 6,
+          "y": 4
+        },
+        "amount": 1
+      }
+    ],
+    "211": [],
+    "212": [],
+    "213": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 5
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 5
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 5,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 5,
+          "y": 4
+        },
+        "amount": 1
+      }
+    ],
+    "214": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 2,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 2,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 5,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 5,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 6,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 6,
+          "y": 4
+        },
+        "amount": 1
+      }
+    ],
+    "215": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 5
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 6
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 5,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 6,
+          "y": 4
+        },
+        "amount": 1
+      }
+    ],
+    "216": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 2
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 3
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 5,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 6,
+          "y": 4
+        },
+        "amount": 1
+      }
+    ],
+    "217": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 2,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 3,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 5,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 6,
+          "y": 4
+        },
+        "amount": 1
+      }
+    ],
+    "218": [],
+    "219": [],
+    "220": [],
+    "221": [],
+    "222": [],
+    "223": [],
+    "224": [],
+    "225": [],
+    "226": [],
+    "227": [],
+    "228": [],
+    "229": [],
+    "230": [],
+    "231": [],
+    "232": [],
+    "233": [],
+    "234": [],
+    "235": [],
+    "236": [],
+    "237": [],
+    "238": [],
+    "239": [],
+    "240": [],
+    "241": [],
+    "242": [],
+    "243": [],
+    "244": [],
+    "245": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 2,
+          "y": 4
+        },
+        "amount": 3
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 2,
+          "y": 4
+        },
+        "amount": 3
+      }
+    ],
+    "246": [],
+    "247": [],
+    "248": [],
+    "249": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 5
+        },
+        "amount": 3
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 5
+        },
+        "amount": 3
+      }
+    ],
+    "250": [],
+    "251": [],
+    "252": [],
+    "253": [],
+    "254": [],
+    "255": [],
+    "256": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 2
+        },
+        "amount": 3
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 2
+        },
+        "amount": 3
+      }
+    ],
+    "257": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 5
+        },
+        "amount": 3
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 5
+        },
+        "amount": 3
+      }
+    ],
+    "258": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 2,
+          "y": 4
+        },
+        "amount": 3
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 2,
+          "y": 4
+        },
+        "amount": 3
+      }
+    ],
+    "259": [],
+    "260": [],
+    "261": [],
+    "262": [],
+    "263": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 2
+        },
+        "amount": 3
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 2
+        },
+        "amount": 3
+      }
+    ],
+    "264": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 6
+        },
+        "amount": 3
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 6
+        },
+        "amount": 3
+      }
+    ],
+    "265": [],
+    "266": [],
+    "267": [],
+    "268": [],
+    "269": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 6
+        },
+        "amount": 3
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 6
+        },
+        "amount": 3
+      }
+    ],
+    "270": [],
+    "271": [],
+    "272": [],
+    "273": [],
+    "274": [],
+    "275": [],
+    "276": [],
+    "277": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 5,
+          "y": 4
+        },
+        "amount": 3
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 5,
+          "y": 4
+        },
+        "amount": 3
+      }
+    ],
+    "278": [],
+    "279": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 5
+        },
+        "amount": 3
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 5
+        },
+        "amount": 3
+      }
+    ],
+    "280": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 2,
+          "y": 4
+        },
+        "amount": 3
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 2,
+          "y": 4
+        },
+        "amount": 3
+      }
+    ],
+    "281": [],
+    "282": [
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 5
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 6
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 5,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 6,
+          "y": 4
+        },
+        "amount": 1
+      }
+    ],
+    "283": [
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 2
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 3
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 5,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 6,
+          "y": 4
+        },
+        "amount": 1
+      }
+    ],
+    "284": [
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 2,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 3,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 5,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 6,
+          "y": 4
+        },
+        "amount": 1
+      }
+    ],
+    "285": [
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 2
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 3
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 5,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 6,
+          "y": 4
+        },
+        "amount": 1
+      }
+    ],
+    "286": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 2,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 3,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 2
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 3
+        },
+        "amount": 1
+      }
+    ],
+    "287": [
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 2
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 3
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 5
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 6
+        },
+        "amount": 1
+      }
+    ],
+    "288": [
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 2
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 3
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 5,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 6,
+          "y": 4
+        },
+        "amount": 1
+      }
+    ],
+    "289": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 5,
+          "y": 4
+        },
+        "amount": 3
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 5,
+          "y": 4
+        },
+        "amount": 3
+      }
+    ],
+    "290": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 5,
+          "y": 4
+        },
+        "amount": 3
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 5,
+          "y": 4
+        },
+        "amount": 3
+      }
+    ],
+    "291": [],
+    "292": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 6,
+          "y": 4
+        },
+        "amount": 3
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 6,
+          "y": 4
+        },
+        "amount": 3
+      }
+    ],
+    "293": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 5
+        },
+        "amount": 3
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 5
+        },
+        "amount": 3
+      }
+    ],
+    "294": [],
+    "295": [],
+    "296": [],
+    "297": [],
+    "298": [],
+    "299": [],
+    "300": [],
+    "301": [],
+    "302": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 7,
+          "y": 5
+        },
+        "amount": 3
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 7,
+          "y": 5
+        },
+        "amount": 3
+      }
+    ],
+    "303": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 2,
+          "y": 4
+        },
+        "amount": 3
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 2,
+          "y": 4
+        },
+        "amount": 3
+      }
+    ],
+    "304": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 3
+        },
+        "amount": 3
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 3
+        },
+        "amount": 3
+      }
+    ],
+    "305": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 6,
+          "y": 7
+        },
+        "amount": 3
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 6,
+          "y": 7
+        },
+        "amount": 3
+      }
+    ],
+    "306": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 6,
+          "y": 7
+        },
+        "amount": 3
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 6,
+          "y": 7
+        },
+        "amount": 3
+      }
+    ],
+    "307": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 6,
+          "y": 4
+        },
+        "amount": 3
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 6,
+          "y": 4
+        },
+        "amount": 3
+      }
+    ],
+    "308": [],
+    "309": [],
+    "310": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 6,
+          "y": 7
+        },
+        "amount": 3
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 6,
+          "y": 7
+        },
+        "amount": 3
+      }
+    ],
+    "311": [],
+    "312": [],
+    "313": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 2
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 3
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 5
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 6
+        },
+        "amount": 1
+      }
+    ],
+    "314": [
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 2,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 3,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 2
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 3
+        },
+        "amount": 1
+      }
+    ],
+    "315": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 2
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 3
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 5,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 6,
+          "y": 4
+        },
+        "amount": 1
+      }
+    ],
+    "316": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 2
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 3
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 5,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 6,
+          "y": 4
+        },
+        "amount": 1
+      }
+    ],
+    "317": [],
+    "318": [],
+    "319": [],
+    "320": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 2
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 3
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 5,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 6,
+          "y": 4
+        },
+        "amount": 1
+      }
+    ],
+    "321": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 5
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 6
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 5,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 6,
+          "y": 4
+        },
+        "amount": 1
+      }
+    ],
+    "322": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 5
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 6
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 5,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 6,
+          "y": 4
+        },
+        "amount": 1
+      }
+    ],
+    "323": [
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 2,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 3,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 2
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 3
+        },
+        "amount": 1
+      }
+    ],
+    "324": [
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 2,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 3,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 2
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 3
+        },
+        "amount": 1
+      }
+    ],
+    "325": [
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 2,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 3,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 5
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 6
+        },
+        "amount": 1
+      }
+    ],
+    "326": [],
+    "327": [],
+    "328": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 5
+        },
+        "amount": 3
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 5
+        },
+        "amount": 3
+      }
+    ],
+    "329": [],
+    "330": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 6,
+          "y": 4
+        },
+        "amount": 3
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 6,
+          "y": 4
+        },
+        "amount": 3
+      }
+    ],
+    "331": [],
+    "332": [],
+    "333": [],
+    "334": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 2,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 3,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 2
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 3
+        },
+        "amount": 1
+      }
+    ],
+    "335": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 2,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 3,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 5
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 6
+        },
+        "amount": 1
+      }
+    ],
+    "336": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 2,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 3,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 2
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 3
+        },
+        "amount": 1
+      }
+    ],
+    "337": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 2,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 3,
+          "y": 4
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 5
+        },
+        "amount": 1
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 6
+        },
+        "amount": 1
+      }
+    ],
+    "338": [],
+    "339": [],
+    "340": [],
+    "341": [],
+    "342": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 5
+        },
+        "amount": 3
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 5
+        },
+        "amount": 3
+      }
+    ],
+    "343": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 5,
+          "y": 4
+        },
+        "amount": 3
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 5,
+          "y": 4
+        },
+        "amount": 3
+      }
+    ],
+    "344": [],
+    "345": [
+      {
+        "type": "ADD_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 5
+        },
+        "amount": 3
+      },
+      {
+        "type": "REMOVE_BIOMASS",
+        "position": {
+          "x": 4,
+          "y": 5
+        },
+        "amount": 3
+      }
+    ],
+    "346": [],
+    "347": [],
+    "348": [],
+    "349": [],
+    "350": []
+  }
+}
